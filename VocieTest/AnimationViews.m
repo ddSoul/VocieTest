@@ -52,6 +52,11 @@
     tempPoint.point_Y = pointY;
     [self.pointArray addObject:tempPoint];
     
+    //到头了，重新开始吧
+    if (self.pointArray.count/5 == self.frame.size.width) {
+        [self.pointArray removeAllObjects];
+        self.pointX = 0;
+    }
     
     self.bezierPath = [UIBezierPath bezierPath];
     [self.bezierPath moveToPoint:CGPointMake(self.frame.size.width, 200)];

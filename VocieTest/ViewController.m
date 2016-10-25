@@ -68,13 +68,14 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     [self.view addSubview:self.animationVies];
     [self setRecorder];
     [self startUpdatingMeter];
 
 }
-// Define the recorder setting
+//AVAudioRecorder 的一些设置，参考的
 - (void)setRecorder{
     {
         NSMutableDictionary *recordSettings = [[NSMutableDictionary alloc] init];
@@ -137,7 +138,7 @@
     meterUpdateDisplayLink.frameInterval = 1;
     [meterUpdateDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
-
+//更新
 - (void)updateMeters
 {
     
@@ -151,7 +152,7 @@
         
     }
 }
-
+//开始
 - (IBAction)star:(UIButton *)sender {
     
     /*
@@ -180,7 +181,7 @@
     
 
 }
-
+//停止
 - (IBAction)stop:(UIButton *)sender {
     
     _isRecordingPaused = NO;
