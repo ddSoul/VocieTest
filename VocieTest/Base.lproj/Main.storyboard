@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWc-Mm-FEL">
+                                <color key="backgroundColor" red="1" green="0.57398927700000002" blue="0.40619120089999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="xde-ZS-VCF"/>
+                                </constraints>
+                                <state key="normal" title="star"/>
+                                <connections>
+                                    <action selector="star:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Z8-pz-q3J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xS-db-85y">
+                                <color key="backgroundColor" red="1" green="0.57398927700000002" blue="0.40619120089999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="frw-Ue-aN4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3xS-db-85y" secondAttribute="trailing" constant="46" id="7hB-sh-GbR"/>
+                            <constraint firstItem="KWc-Mm-FEL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="509" id="9SS-Kw-WPm"/>
+                            <constraint firstItem="KWc-Mm-FEL" firstAttribute="baseline" secondItem="3xS-db-85y" secondAttribute="firstBaseline" id="FaP-90-qlf"/>
+                            <constraint firstItem="KWc-Mm-FEL" firstAttribute="top" secondItem="3xS-db-85y" secondAttribute="top" id="YdR-3M-mN9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KWc-Mm-FEL" secondAttribute="bottom" constant="84" id="dE6-cI-ZAG"/>
+                            <constraint firstItem="3xS-db-85y" firstAttribute="baseline" secondItem="KWc-Mm-FEL" secondAttribute="firstBaseline" id="hDM-Po-RF3"/>
+                            <constraint firstItem="KWc-Mm-FEL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="63" id="t0e-4m-jLW"/>
+                            <constraint firstItem="3xS-db-85y" firstAttribute="leading" secondItem="KWc-Mm-FEL" secondAttribute="trailing" constant="90" id="w3i-5u-OK7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
