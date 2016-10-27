@@ -46,7 +46,7 @@
 {
     [self.waveShapeLayer removeFromSuperlayer];
     
-    self.pointX = self.pointX + 0.2;
+    
     MyPoint *tempPoint = [MyPoint new];
     tempPoint.point_X = self.pointX;
     tempPoint.point_Y = pointY;
@@ -61,7 +61,7 @@
     self.bezierPath = [UIBezierPath bezierPath];
     
     for (MyPoint * value in self.pointArray) {
-        if (value.point_X == 0.2) {
+        if (value.point_X == 0) {
             [self.bezierPath moveToPoint:CGPointMake(value.point_X, 200 - value.point_Y)];
         }else{
             [self.bezierPath addLineToPoint:CGPointMake(value.point_X, 200 - value.point_Y)];
@@ -77,7 +77,7 @@
     
     [self.layer addSublayer:self.waveShapeLayer];
     
-    
+    self.pointX = self.pointX + 0.2;
     
 }
 
