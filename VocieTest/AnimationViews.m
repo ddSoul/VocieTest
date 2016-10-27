@@ -59,20 +59,25 @@
     }
     
     self.bezierPath = [UIBezierPath bezierPath];
-    [self.bezierPath moveToPoint:CGPointMake(self.frame.size.width, 200)];
     
     for (MyPoint * value in self.pointArray) {
-        [self.bezierPath addLineToPoint:CGPointMake(value.point_X, 200 - value.point_Y)];
+        if (value.point_X == 0.2) {
+            [self.bezierPath moveToPoint:CGPointMake(value.point_X, 200 - value.point_Y)];
+        }else{
+            [self.bezierPath addLineToPoint:CGPointMake(value.point_X, 200 - value.point_Y)];
+        }
     }
     
     self.waveShapeLayer = [CAShapeLayer layer];
     self.waveShapeLayer.lineWidth = 2;
     self.waveShapeLayer.strokeColor = [UIColor redColor].CGColor;
-    self.waveShapeLayer.fillColor = [UIColor whiteColor].CGColor;
+    self.waveShapeLayer.fillColor = [UIColor greenColor].CGColor;
+    
+    self.waveShapeLayer.path = self.bezierPath.CGPath;
     
     [self.layer addSublayer:self.waveShapeLayer];
     
-    self.waveShapeLayer.path = self.bezierPath.CGPath;
+    
     
 }
 
