@@ -46,7 +46,6 @@
 {
     [self.waveShapeLayer removeFromSuperlayer];
     
-    
     MyPoint *tempPoint = [MyPoint new];
     tempPoint.point_X = self.pointX;
     tempPoint.point_Y = pointY;
@@ -60,6 +59,7 @@
     
     self.bezierPath = [UIBezierPath bezierPath];
     
+    //绘制路径
     for (MyPoint * value in self.pointArray) {
         if (value.point_X == 0) {
             [self.bezierPath moveToPoint:CGPointMake(value.point_X, 200 - value.point_Y)];
@@ -68,15 +68,15 @@
         }
     }
     
+    //初始化shape
     self.waveShapeLayer = [CAShapeLayer layer];
     self.waveShapeLayer.lineWidth = 2;
     self.waveShapeLayer.strokeColor = [UIColor redColor].CGColor;
     self.waveShapeLayer.fillColor = [UIColor greenColor].CGColor;
     
+    //
     self.waveShapeLayer.path = self.bezierPath.CGPath;
-    
     [self.layer addSublayer:self.waveShapeLayer];
-    
     self.pointX = self.pointX + 0.2;
     
 }
