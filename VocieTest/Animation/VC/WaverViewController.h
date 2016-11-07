@@ -1,5 +1,5 @@
 //
-//  WaveViewController.h
+//  WaverViewController.h
 //  VocieTest
 //
 //  Created by ddSoul on 16/11/7.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WaveViewController : UIViewController
+@interface WaverViewController : UIViewController
 
 @end

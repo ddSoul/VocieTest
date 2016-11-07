@@ -10,10 +10,6 @@
 
 @interface SiriView ()
 
-
-/**
- 渐变色
- */
 @property (nonatomic) CAGradientLayer *gradientLayer;
 @property (nonatomic) CAGradientLayer *gradientLayer_other;
 /**
@@ -25,19 +21,10 @@
  振幅
  */
 @property (nonatomic) CGFloat amplitude;
-
 @property (nonatomic) NSMutableArray * waves;
-/**
- 视图宽高
- */
 @property (nonatomic) CGFloat waveHeight;
 @property (nonatomic) CGFloat waveWidth;
-
 @property (nonatomic) CGFloat waveMid;
-
-/**
- 最大振幅
- */
 @property (nonatomic) CGFloat maxAmplitude;
 
 @end
@@ -104,7 +91,7 @@
     self.maxAmplitude = self.waveHeight - 4.0f;
 }
 
--(void)setWaverLevelCallback:(void (^)())siriLevelCallback
+- (void)setSiriLevelCallback:(void (^)())siriLevelCallback
 {
     _siriLevelCallback = siriLevelCallback;
     
@@ -135,6 +122,7 @@
     self.phase += self.phaseShift; // Move the wave
     
     self.amplitude = fmax( level, self.idleAmplitude);
+    
     [self updateMeters];
 }
 

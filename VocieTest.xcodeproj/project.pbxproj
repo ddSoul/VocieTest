@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B3C6F9E1DD01C620080E27A /* IQAudioRecorderConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C6F8D1DD01C620080E27A /* IQAudioRecorderConstraints.m */; };
 		7B3C6F9F1DD01C620080E27A /* MyPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C6F8F1DD01C620080E27A /* MyPoint.m */; };
 		7B3C6FA01DD01C620080E27A /* SiriViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C6F921DD01C620080E27A /* SiriViewController.m */; };
-		7B3C6FA31DD01C620080E27A /* AnimationViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C6F981DD01C620080E27A /* AnimationViews.m */; };
 		7B3C6FA41DD01C620080E27A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C6F9B1DD01C620080E27A /* AppDelegate.m */; };
-		7B3C6FA91DD01CFF0080E27A /* WaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C6FA71DD01CFF0080E27A /* WaveViewController.m */; };
-		7B3C6FAA1DD01CFF0080E27A /* WaveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C6FA81DD01CFF0080E27A /* WaveViewController.xib */; };
 		7B3C6FAE1DD01D480080E27A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C6FAC1DD01D480080E27A /* HomeViewController.m */; };
 		7B3C6FAF1DD01D480080E27A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C6FAD1DD01D480080E27A /* HomeViewController.xib */; };
 		7B3C6FB21DD0229B0080E27A /* SiriView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C6FB11DD0229B0080E27A /* SiriView.m */; };
+		7B3C6FB51DD04D670080E27A /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C6FB41DD04D670080E27A /* WaveView.m */; };
+		7B3C6FB81DD057430080E27A /* WaverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C6FB71DD057430080E27A /* WaverViewController.m */; };
 		EE3CC1151DBF33C50028EEBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3CC1141DBF33C50028EEBF /* main.m */; };
 		EE3CC1201DBF33C50028EEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3CC11F1DBF33C50028EEBF /* Assets.xcassets */; };
 		EE3CC12E1DBF33C50028EEBF /* VocieTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3CC12D1DBF33C50028EEBF /* VocieTestTests.m */; };
@@ -41,24 +39,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7B3C6F8C1DD01C620080E27A /* IQAudioRecorderConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQAudioRecorderConstraints.h; sourceTree = "<group>"; };
-		7B3C6F8D1DD01C620080E27A /* IQAudioRecorderConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQAudioRecorderConstraints.m; sourceTree = "<group>"; };
 		7B3C6F8E1DD01C620080E27A /* MyPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPoint.h; sourceTree = "<group>"; };
 		7B3C6F8F1DD01C620080E27A /* MyPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPoint.m; sourceTree = "<group>"; };
 		7B3C6F911DD01C620080E27A /* SiriViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriViewController.h; sourceTree = "<group>"; };
 		7B3C6F921DD01C620080E27A /* SiriViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriViewController.m; sourceTree = "<group>"; };
-		7B3C6F971DD01C620080E27A /* AnimationViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViews.h; sourceTree = "<group>"; };
-		7B3C6F981DD01C620080E27A /* AnimationViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViews.m; sourceTree = "<group>"; };
 		7B3C6F9A1DD01C620080E27A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B3C6F9B1DD01C620080E27A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7B3C6FA61DD01CFF0080E27A /* WaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveViewController.h; sourceTree = "<group>"; };
-		7B3C6FA71DD01CFF0080E27A /* WaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveViewController.m; sourceTree = "<group>"; };
-		7B3C6FA81DD01CFF0080E27A /* WaveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaveViewController.xib; sourceTree = "<group>"; };
 		7B3C6FAB1DD01D480080E27A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		7B3C6FAC1DD01D480080E27A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		7B3C6FAD1DD01D480080E27A /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		7B3C6FB01DD0229B0080E27A /* SiriView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriView.h; sourceTree = "<group>"; };
 		7B3C6FB11DD0229B0080E27A /* SiriView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriView.m; sourceTree = "<group>"; };
+		7B3C6FB31DD04D670080E27A /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
+		7B3C6FB41DD04D670080E27A /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
+		7B3C6FB61DD057430080E27A /* WaverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaverViewController.h; sourceTree = "<group>"; };
+		7B3C6FB71DD057430080E27A /* WaverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaverViewController.m; sourceTree = "<group>"; };
 		EE3CC1101DBF33C50028EEBF /* VocieTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocieTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3CC1141DBF33C50028EEBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EE3CC11F1DBF33C50028EEBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,8 +104,6 @@
 		7B3C6F8B1DD01C620080E27A /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				7B3C6F8C1DD01C620080E27A /* IQAudioRecorderConstraints.h */,
-				7B3C6F8D1DD01C620080E27A /* IQAudioRecorderConstraints.m */,
 				7B3C6F8E1DD01C620080E27A /* MyPoint.h */,
 				7B3C6F8F1DD01C620080E27A /* MyPoint.m */,
 			);
@@ -122,9 +115,8 @@
 			children = (
 				7B3C6F911DD01C620080E27A /* SiriViewController.h */,
 				7B3C6F921DD01C620080E27A /* SiriViewController.m */,
-				7B3C6FA61DD01CFF0080E27A /* WaveViewController.h */,
-				7B3C6FA71DD01CFF0080E27A /* WaveViewController.m */,
-				7B3C6FA81DD01CFF0080E27A /* WaveViewController.xib */,
+				7B3C6FB61DD057430080E27A /* WaverViewController.h */,
+				7B3C6FB71DD057430080E27A /* WaverViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -132,10 +124,10 @@
 		7B3C6F961DD01C620080E27A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7B3C6F971DD01C620080E27A /* AnimationViews.h */,
-				7B3C6F981DD01C620080E27A /* AnimationViews.m */,
 				7B3C6FB01DD0229B0080E27A /* SiriView.h */,
 				7B3C6FB11DD0229B0080E27A /* SiriView.m */,
+				7B3C6FB31DD04D670080E27A /* WaveView.h */,
+				7B3C6FB41DD04D670080E27A /* WaveView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -319,7 +311,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B3C6FAA1DD01CFF0080E27A /* WaveViewController.xib in Resources */,
 				EE3CC1201DBF33C50028EEBF /* Assets.xcassets in Resources */,
 				7B3C6FAF1DD01D480080E27A /* HomeViewController.xib in Resources */,
 			);
@@ -346,13 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B3C6FB81DD057430080E27A /* WaverViewController.m in Sources */,
 				7B3C6F9F1DD01C620080E27A /* MyPoint.m in Sources */,
-				7B3C6FA91DD01CFF0080E27A /* WaveViewController.m in Sources */,
+				7B3C6FB51DD04D670080E27A /* WaveView.m in Sources */,
 				7B3C6FA01DD01C620080E27A /* SiriViewController.m in Sources */,
 				EE3CC1151DBF33C50028EEBF /* main.m in Sources */,
 				7B3C6FAE1DD01D480080E27A /* HomeViewController.m in Sources */,
-				7B3C6FA31DD01C620080E27A /* AnimationViews.m in Sources */,
-				7B3C6F9E1DD01C620080E27A /* IQAudioRecorderConstraints.m in Sources */,
 				7B3C6FB21DD0229B0080E27A /* SiriView.m in Sources */,
 				7B3C6FA41DD01C620080E27A /* AppDelegate.m in Sources */,
 			);

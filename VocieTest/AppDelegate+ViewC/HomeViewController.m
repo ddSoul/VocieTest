@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 #import "SiriViewController.h"
-#import "WaveViewController.h"
+#import "WaverViewController.h"
 
 @interface HomeViewController ()
 - (IBAction)siriButton:(UIButton *)sender;
@@ -50,7 +50,7 @@
     animation.type = @"rippleEffect";
     animation.subtype = kCATransitionFromLeft;
     [self.view.window.layer addAnimation:animation forKey:nil];
-    WaveViewController *preVc = [[WaveViewController alloc] init];
+    WaverViewController *preVc = [[WaverViewController alloc] init];
     [self presentViewController:preVc animated:YES completion:nil];
 }
 @end

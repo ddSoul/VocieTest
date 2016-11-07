@@ -1,15 +1,15 @@
 //
-//  AnimationViews.m
+//  WaveView.m
 //  VocieTest
 //
-//  Created by 邓西亮 on 16/10/25.
+//  Created by ddSoul on 16/11/7.
 //  Copyright © 2016年 dxl. All rights reserved.
 //
 
-#import "AnimationViews.h"
+#import "WaveView.h"
 #import "MyPoint.h"
 
-@interface AnimationViews ()
+@interface WaveView ()
 
 @property (assign, nonatomic) CGFloat pointX;
 @property (strong, nonatomic) CAShapeLayer *waveShapeLayer;
@@ -18,43 +18,53 @@
 
 @end
 
-@implementation AnimationViews
+@implementation WaveView
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
-    if(self)
-    {
-        self.frame = frame;
-        [self createControls];
+    if (self = [super initWithFrame:frame]) {
+        [self initConfige];
     }
+    
     return self;
 }
 
-/**
- * 创建控件
- */
-- (void)createControls
+- (void)initConfige
 {
     self.backgroundColor = [UIColor greenColor];
+    self.waveWidth = 2.0f;
+    self.phaseX = 0.2f;
     self.pointArray = @[].mutableCopy;
-
+}
+- (void)setWaveBlock:(void (^)())waveBlock
+{
+    _waveBlock = waveBlock;
+    
+    CADisplayLink *displaylink = [CADisplayLink displayLinkWithTarget:_waveBlock selector:@selector(invoke)];
+    [displaylink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 
-- (void)animationAddPointY:(CGFloat)pointY
+- (void)setLevel:(CGFloat)level
+{
+    _level = level*100;
+    [self updateMeters];
+}
+
+- (void)updateMeters
 {
     
     [self.waveShapeLayer removeFromSuperlayer];
     
     MyPoint *tempPoint = [MyPoint new];
     tempPoint.point_X = self.pointX;
-    tempPoint.point_Y = pointY;
+    tempPoint.point_Y = self.level;
     [self.pointArray addObject:tempPoint];
     
     //到头了，重新开始吧
     if (self.pointArray.count/5 == self.frame.size.width) {
         [self.pointArray removeAllObjects];
         self.pointX = 0;
+        return;
     }
     
     self.bezierPath = [UIBezierPath bezierPath];
@@ -70,15 +80,14 @@
     
     //初始化shape
     self.waveShapeLayer = [CAShapeLayer layer];
-    self.waveShapeLayer.lineWidth = 2;
+    self.waveShapeLayer.lineWidth = self.waveWidth;
     self.waveShapeLayer.strokeColor = [UIColor redColor].CGColor;
     self.waveShapeLayer.fillColor = [UIColor greenColor].CGColor;
     
     //
     self.waveShapeLayer.path = self.bezierPath.CGPath;
     [self.layer addSublayer:self.waveShapeLayer];
-    self.pointX = self.pointX + 0.2;
-    
+    self.pointX = self.pointX + self.phaseX;
 }
 
 @end

@@ -1,50 +1,43 @@
 //
-//  SiriViewController.m
+//  WaverViewController.m
 //  VocieTest
 //
 //  Created by ddSoul on 16/11/7.
 //  Copyright © 2016年 dxl. All rights reserved.
 //
 
-#import "SiriViewController.h"
-#import "SiriView.h"
+#import "WaverViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "WaveView.h"
 
-@interface SiriViewController ()
-
-@property (nonatomic, strong) UIButton *backButton;
+@interface WaverViewController ()
 
 @property (nonatomic, strong) AVAudioRecorder *recorder;
+@property (nonatomic, strong) UIButton *backButton;
 
 @end
 
-@implementation SiriViewController
-
-
+@implementation WaverViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
-    
     [self setupRecorder];
+    WaveView * waver = [[WaveView alloc] initWithFrame:CGRectMake(0, 0,self.view.frame.size.width, CGRectGetHeight(self.view.bounds))];
     
-    self.view.backgroundColor = [UIColor blackColor];
-    
-    SiriView * siri = [[SiriView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
-    
-    __weak SiriView * weakSiri = siri;
-    siri.siriLevelCallback = ^() {
+    __weak WaveView * weakWaver = waver;
+    waver.waveBlock = ^() {
         
         [self.recorder updateMeters];
         
         CGFloat normalizedValue = pow (10, [self.recorder averagePowerForChannel:0] / 40);
         
-        weakSiri.level = normalizedValue;
+        weakWaver.level = normalizedValue;
         
     };
-    [self.view addSubview:siri];
+    [self.recorder record];
+    [self.view addSubview:waver];
     [self.view addSubview:self.backButton];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 
@@ -73,7 +66,7 @@
     
     [self.recorder prepareToRecord];
     [self.recorder setMeteringEnabled:YES];
-    [self.recorder record];
+    //    [self.recorder record];
     
 }
 
@@ -95,8 +88,9 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    [self.view.layer removeFromSuperlayer];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end

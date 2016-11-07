@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+//typedef NS_ENUM(NSInteger, AnimationType) {
+//    KAnimationSiri = 0,
+//    KAnimationWave
+//};
+
 @interface SiriView : UIView
 
 @property (nonatomic, copy) void (^siriLevelCallback)();
@@ -60,7 +65,7 @@
 
 
 /**
- 相位移动
+ 相位移动，可以理解为绘图的x单位
  */
 @property (nonatomic) CGFloat phaseShift;
 
