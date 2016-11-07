@@ -41,9 +41,9 @@
 
 }
 
-
 - (void)animationAddPointY:(CGFloat)pointY
 {
+    
     [self.waveShapeLayer removeFromSuperlayer];
     
     MyPoint *tempPoint = [MyPoint new];

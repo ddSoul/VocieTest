@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WE1-Sy-kof">
+                    <color key="backgroundColor" red="1" green="0.57398927700000002" blue="0.40619120089999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="83" id="r8k-nU-5iL"/>
+                    </constraints>
+                    <state key="normal" title="click" backgroundImage="wave">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="waveButton:" destination="-1" eventType="touchUpInside" id="0os-3V-oKe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zf-Zn-EpN">
+                    <color key="backgroundColor" red="1" green="0.57398927700000002" blue="0.40619120089999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="83" id="kM0-r2-7yb"/>
+                    </constraints>
+                    <state key="normal" title="click" backgroundImage="siri">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="siriButton:" destination="-1" eventType="touchUpInside" id="be2-B6-56v"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7zf-Zn-EpN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="94" id="06I-sF-pt3"/>
+                <constraint firstItem="7zf-Zn-EpN" firstAttribute="leading" secondItem="WE1-Sy-kof" secondAttribute="leading" id="4el-ON-XWt"/>
+                <constraint firstItem="7zf-Zn-EpN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Jhe-fZ-QaP"/>
+                <constraint firstItem="WE1-Sy-kof" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="tNa-oB-Jgd"/>
+                <constraint firstItem="WE1-Sy-kof" firstAttribute="top" secondItem="7zf-Zn-EpN" secondAttribute="bottom" constant="42" id="vO7-YE-9Nh"/>
+                <constraint firstItem="7zf-Zn-EpN" firstAttribute="trailing" secondItem="WE1-Sy-kof" secondAttribute="trailing" id="xnH-Ku-AhU"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="siri" width="277" height="119"/>
+        <image name="wave" width="183" height="95"/>
+    </resources>
+</document>

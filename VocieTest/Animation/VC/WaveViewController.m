@@ -1,17 +1,17 @@
 //
-//  ViewController.m
+//  WaveViewController.m
 //  VocieTest
 //
-//  Created by 邓西亮 on 16/10/25.
+//  Created by ddSoul on 16/11/7.
 //  Copyright © 2016年 dxl. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "WaveViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "IQAudioRecorderConstraints.h"
 #import "AnimationViews.h"
 
-@interface ViewController ()
+@interface WaveViewController ()
 {
     
     //Recording...
@@ -21,13 +21,13 @@
     
     //Playing
     AVAudioPlayer *_audioPlayer;
-
+    
     //Recording controls
     BOOL _isRecordingPaused;
-
+    
     //Private variables
     NSString *_oldSessionCategory;
-
+    
 }
 /**
  Maximum duration of the audio file to be recorded.
@@ -61,20 +61,22 @@
 
 @property (nonatomic, strong) AnimationViews *animationVies;
 
-- (IBAction)star:(UIButton *)sender;
-- (IBAction)stop:(UIButton *)sender;
+
+- (IBAction)starButton:(UIButton *)sender;
+- (IBAction)stopButton:(UIButton *)sender;
+- (IBAction)backButton:(UIButton *)sender;
+
 @end
 
-@implementation ViewController
+@implementation WaveViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     [self.view addSubview:self.animationVies];
     [self setRecorder];
     [self startUpdatingMeter];
-
 }
+
 //AVAudioRecorder 的一些设置，参考的
 - (void)setRecorder{
     {
@@ -128,7 +130,7 @@
         _audioRecorder.meteringEnabled = YES;
         
     }
-
+    
 }
 
 -(void)startUpdatingMeter
@@ -147,14 +149,31 @@
         [_audioRecorder updateMeters];
         
         CGFloat normalizedValue = pow (10, [_audioRecorder averagePowerForChannel:0] / 20);
-
+        
         [self.animationVies animationAddPointY:normalizedValue * 150];
         
     }
 }
-//开始
-- (IBAction)star:(UIButton *)sender {
-    
+
+
+- (AnimationViews *)animationVies
+{
+    if (!_animationVies) {
+        _animationVies = [[AnimationViews alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 500)];
+    }
+    return _animationVies;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    [meterUpdateDisplayLink invalidate];
+    [self.animationVies.layer removeFromSuperlayer];
+    // Dispose of any resources that can be recreated.
+}
+
+
+
+- (IBAction)starButton:(UIButton *)sender {
     /*
      Create the recorder
      */
@@ -178,30 +197,15 @@
     {
         [_audioRecorder recordForDuration:self.maximumRecordDuration];
     }
-    
 
 }
-//停止
-- (IBAction)stop:(UIButton *)sender {
-    
+
+- (IBAction)stopButton:(UIButton *)sender {
     _isRecordingPaused = NO;
     [_audioRecorder stop];
 }
 
-- (AnimationViews *)animationVies
-{
-    if (!_animationVies) {
-        _animationVies = [[AnimationViews alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 500)];
-    }
-    return _animationVies;
+- (IBAction)backButton:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    [meterUpdateDisplayLink invalidate];
-    [self.animationVies.layer removeFromSuperlayer];
-    // Dispose of any resources that can be recreated.
-}
-
-
 @end
